@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Lexend Deca";
+    src: url(./Lexend_Deca/LexendDeca-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:"Big Shoulders Display";
+    src: url(./Big_Shoulders_Display/BigShouldersDisplay-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --sedanBackground: hsl(31, 77%, 52%);
+    --suvBackground:hsl(184, 100%, 22%);
+    --luxuryBackground: hsl(179, 100%, 13%);
+    --mainWhite: hsl(0, 0%, 95%);
+    --paraghraps: hsla(0, 0%, 100%, 0.75);
+    --HeaderFont: "Big Shoulders Display"; /*weight 400*/
+    --paraghrapsFont: "Lexend Deca"; /*weight 700*/
+    /*Font size 15px*/
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 30px;
+}
+section article{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 2rem;
+    justify-content: start;
+}
+article img{
+    width: 50px;
+}
+article h1{
+    font-family: var(--HeaderFont);
+    color: var(--mainWhite);
+    font-weight: 700;
+    font-size: 30px;
+}
+article span{
+    font-family: var(--paraghrapsFont);
+    color: var(--paraghraps);
+    font-size: 15px;
+    font-weight: 400;
+}
+article button{
+    width: 120px;
+    height: 40px;
+    background-color: var(--mainWhite);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: var(--paraghrapsFont);
+}
+button:hover{
+    background: none;
+    border: solid;
+    border-color: var(--mainWhite);
+}
+.sedans{
+    background-color: var(--sedanBackground);
+}
+.sedans :nth-child(4){
+    color: var(--sedanBackground);
+}
+.sedans :nth-child(4):hover{
+    color: white;
+}
+.suvs{
+    background-color: var(--suvBackground);
+}
+.suvs :nth-child(4){
+    color: var(--suvBackground);
+}
+.suvs :nth-child(4):hover{
+    color: white;
+}
+.luxury{
+    background-color: var(--luxuryBackground);
+}
+.luxury :nth-child(4){
+    color: var(--luxuryBackground);
+}
+.luxury :nth-child(4):hover{
+    color: white;
+}
+
+@media(min-width:1024px){
+    main{
+        height: 100vh;
+    }
+    section{
+        width: 720px;
+        display: flex;
+        flex-direction: row;
+    }
+}

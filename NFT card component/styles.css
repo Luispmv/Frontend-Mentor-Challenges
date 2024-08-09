@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "Outfit";
+    src: url(./Outfit/Outfit-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainBackground: hsl(217, 54%, 11%);
+    --cardBackground: hsl(216, 50%, 16%);
+    --nftWhite:  hsl(0, 0%, 100%);
+    --nftCyan: hsl(178, 100%, 50%);
+    --nftBlue:  hsl(215, 51%, 70%);
+    --nftfont: "Outfit"
+}
+body{
+    background-color: var(--mainBackground);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    max-width: 300px;
+    background-color: var(--cardBackground);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.card .contenedorImagen{
+    width: 90%;
+    align-self: center;
+    position: relative;
+    background-color: var(--nftCyan);
+    font-size: 0;
+    margin-top: 15px;
+}
+.contenedorImagen .imagenPrincipal{
+    width: 100%;
+    align-self: center;
+}
+.contenedorImagen .iconView{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contenedorImagen:hover .imagenPrincipal,
+    .contenedorImagen:hover .iconView {
+    display: block;
+    filter: grayscale(100%);
+    mix-blend-mode: multiply;
+    mix-blend-mode: hard-light;
+    filter: brightness(1);
+    cursor: pointer;
+}
+.card h1{
+    width: 90%;
+    align-self: center;
+    font-family: var(--nftfont);
+    font-size: 1.5rem;
+    color: var(--nftWhite);
+    font-weight: 600;
+}
+.card h1:hover{
+    color: var(--nftCyan);
+    cursor: pointer;
+}
+.card p{
+    width: 90%;
+    align-self: center;
+    font-family: var(--nftfont);
+    color: var(--nftBlue);
+    font-weight: 300;
+}
+.card .ethContainer{
+    width: 90%;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+.ethContainer .ethContainerLeft{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    font-family: var(--nftfont);
+    color: var(--nftCyan);
+    font-weight: 600;
+}
+.ethContainer .ethContainerRight{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+    font-family: var(--nftfont);
+    color: var(--nftBlue);
+    font-weight: 300;
+}
+.card hr{
+    width: 90%;
+    align-self: center;
+}
+.card .userContainer{
+    width: 90%;
+    align-self: center;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.userContainer img{
+    width: 30px;
+}
+.userContainer p{
+    font-family: var(--nftfont);
+    font-weight: 300;
+}
+.userContainer p strong{
+    color: var(--nftWhite);
+}
+.userContainer p strong:hover{
+    color: var(--nftCyan);
+    cursor: pointer;
+}

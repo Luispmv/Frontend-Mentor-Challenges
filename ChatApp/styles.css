@@ -1,0 +1,355 @@
+@font-face {
+    font-family: "Rubik";
+    src: url(./Rubik/Rubik-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --Headerbackground: linear-gradient(90deg, #8838FF 0%, #E942FF 100%);
+    --Chatbackground: linear-gradient(90deg, #E942FF 0%, #8838FF 100%);
+    --violetRectangle: hsl(276, 55%, 52%);
+    --grayRectangle:#F3F0F7;
+    --mainHeading:  hsl(271, 36%, 24%);
+    --paragrahp: hsl(270, 7%, 64%);
+    --phoneBackgorund: #F5F3F8;
+    --ChatWhite: #ffffff;
+    --mainBackground: #FAFAFA;
+    --chatFamily: "Rubik";
+}
+body{
+    background-color: var(--mainBackground);
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    height: 710px;
+}
+main .appSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 450px;
+}
+.purpleBar{
+    width: 40%;
+    height: 25rem;
+    position: absolute;
+    top: 0;
+}
+.purpleBar .rectangle{
+    width: 100%;
+    height: 75%;
+    background-color: var(--violetRectangle);
+}
+.purpleBar .square{
+    width: 100%;
+    height: 25%;
+    background-color: var(--violetRectangle);
+    border-bottom-right-radius: 100%;
+    margin-top: -1px;
+}
+.GrayBar{
+    width: 40%;
+    height: 25rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.GrayBar .square{
+    width: 100%;
+    height: 25%;
+    border-top-left-radius: 100%;
+    background-color: var(--grayRectangle);
+    margin-bottom: -1px;
+}
+.GrayBar .rectangle{
+    width: 100%;
+    height: 75%;
+    background-color: var(--grayRectangle);
+}
+
+.appSection .phone{
+    border: solid;
+    border-color: var(--ChatWhite);
+    position: absolute;
+    /* width: 288px; */
+    transform: translateY(10px);
+    display: flex;
+    flex-direction: column;
+    background: var(--phoneBackgorund);
+    border-radius: 30px;
+    overflow: hidden;
+    /* border-width: thick; */
+    filter: drop-shadow(2px 4px 50px gray);
+
+
+    /*Estilos raros */
+    transform: scale(0.5);
+    width: 320px;
+    border-width: 10px;
+    top: -120px;
+}
+.phone header{
+    width: 100%;
+    background: var(--Headerbackground);
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    height: 90px;
+}
+.phone nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+}
+nav .navLeftSide{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.navLeftSide .arrowBack{
+
+}
+.navLeftSide .avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: solid;
+    border-color: white;
+    border-width: 2px;
+}
+.navLeftSide .user-info{
+    font-family: var(--chatFamily);
+    color: var(--ChatWhite);
+}
+.navLeftSide .user-info p{
+    font-size: 0.7rem;
+    font-weight: 100;
+}
+nav .plus{
+    width: 24px;
+    height: 36px;
+}
+.chatSection{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 7px 
+}
+.chatSection p{
+    font-family: var(--chatFamily);
+    color: var(--violetRectangle);
+    background: #EDE5F3;
+    padding: 10px 0px 10px 5px
+}
+.chatSection :first-child{
+    width: 60%;
+    border-radius: 10px 10px 10px 0px;
+}
+.chatSection :nth-child(2){
+    width: 70%;
+    border-radius: 10px 10px 10px 0px;
+}
+.chatSection .dog-photos{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+.chatSection .dog-photos img{
+    width: 50px;
+    border-radius: 10px;
+}
+.chatSection :nth-child(4){
+    width: 70%;
+    align-self: end;
+    border-radius: 10px 10px 0px 10px 
+}
+.chatSection :nth-child(5){
+    align-self: end;
+    border-radius: 10px 10px 0px 10px 
+}
+.chatSection :nth-child(6){
+    width: 70%;
+    border-radius: 10px 10px 10px 0px;
+}
+.chatSection .prices{
+    background: var(--Chatbackground);
+    display: flex;
+    padding: 10px 0px 10px 5px;
+    width: 70%;
+    border-radius: 10px 10px 10px 0px;
+    color: white;
+    font-family: "Rubik";
+}
+.chatSection .prices .pricesLeft{
+    display: flex;
+    width: 75%;
+    align-items: center;
+    gap: 5px;
+}
+.chatSection .prices .pricesLeft figure{
+    width: 15px;
+    height: 15px;
+    border: solid;
+    border-color: white;
+    border-radius: 100%;
+    border-width: thin;
+}
+.chatSection .prices .pricesLeft span{
+    width: 90%;
+    font-size: 0.8rem;
+}
+.chatSection .prices strong{
+    width: 25%;
+    align-self: center;
+    text-align: center;
+}
+.sendMessage{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-self: center;
+    align-items: center;
+    padding: 7px;
+    background: var(--ChatWhite);
+    border-radius: 30px;
+    margin-bottom: 10px;
+    font-family: var(--chatFamily);
+    font-weight: 100;
+}
+.sendMessage figure{
+    width: 30px;
+    height: 30px;
+    background: var(--mainHeading);
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+}
+.top-rectangle{
+    width: 50%;
+    height: 50px;
+    background-color: var(--ChatWhite);
+    align-self: center;
+    position: absolute;
+    top: -30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.productDescription{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    align-items: center;
+    padding: 0.5rem;
+    text-align: center;
+    font-family: var(--chatFamily);
+    gap: 15px;
+}
+.productDescription h1{
+    font-size: 2rem;
+    color: var(--mainHeading);
+    font-weight: 400;
+}
+.productDescription p{
+    color: var(--paragrahp);
+    padding: 10px 
+}
+
+@media(min-width:425px){
+    .purpleBar{
+        height: 30rem;
+    }
+    .GrayBar{
+        height: 30rem;
+    }
+}
+@media(min-width:768px){
+    main{
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        height: 450px;
+    }
+    .purpleBar{
+        width: 25%;
+        height: 35rem;
+    }
+    .GrayBar{
+        width: 25%;
+        bottom: 0;
+        height: 35rem;
+    }
+    main .appSection{
+        width: 50%;
+    }
+    .productDescription{
+        width: 50%;
+        align-self: center;
+        text-align: start;
+        align-items: start;
+        height: 450px;
+        justify-content: center;
+    }
+    .productDescription p{
+        padding: 0;
+    }
+}
+@media(min-width:1024px){
+    main{
+        position: absolute;
+        height: 625px;
+    }
+    .purpleBar{
+        max-height: 35rem;
+    }
+    .GrayBar{
+        max-height: 35rem;
+    }
+    .appSection{
+        max-height: 35rem;
+    }
+    .appSection .phone{
+        left: 15%;
+        top: -60px;
+        transform: scale(0.6);
+    }
+    .productDescription{
+        max-height: 35rem;
+    }
+    .productDescription p{
+        padding-right: 10pc;
+    }
+}
+@media(min-width:1440px){
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    main{
+        max-width: 1600px;
+    }
+    .purpleBar{
+        width: 20%;
+    }
+    .GrayBar{
+        width: 20%;
+    }
+    .appSection .phone{
+        left: 12%;
+    }
+    .productDescription h1{
+        font-size: 3rem;
+    }
+    .productDescription p{
+        font-size: 1.5rem;
+    }
+}

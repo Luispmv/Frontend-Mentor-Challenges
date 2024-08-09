@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Red Hat Display', sans-serif;
+    src: url(./Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf);
+}
+*{
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --backgroundPale: #DEE6FD;
+    --strongText: #23304B;
+    --blueOcean: #382AE1;
+    --textColor: #8D8C9A;
+    --lightGray: #F8F9FE;
+    --whiteStandard: #ffffff;
+    --ffamily: 'Red Hat Display';
+    --fontSmall: 500;
+    --fontMedium: 700;
+    --fontBold: 900;
+}
+body{
+    background: var(--backgroundPale);
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.waveDesktop{
+    display: none;
+}
+.wave{
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.card{
+    z-index: 1;
+    border-radius: 15px;
+    width: 90%;
+    background-color: var(--whiteStandard);
+    border-radius: 10px;
+}
+.card .hero-image{
+    width: 100%;
+    border-radius: 10px 10px 0px 0;
+}
+.card .mainContent{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.mainContent .offer-description{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.mainContent .offer-description h1{
+    margin-top: 15px;
+    color: var(--strongText);
+    text-align: center;
+    font-weight: var(--fontBold);
+}
+.mainContent .offer-description p{
+    color: var(--textColor);
+    text-align: center;
+    line-height: 30px;
+    font-weight: var(--fontSmall);
+    width: 90%;
+    align-self: center;
+}
+.mainContent .offers{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 15px;
+}
+.offers .offerCard{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--lightGray);
+    height: 80px;
+    padding: 0px 15px 0px 15px;
+    border-radius: 15px;
+}
+.offerCard .leftDiv{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.offerCard .plan-offer p{
+    color: var(--textColor);
+}
+.offerCard a{
+    color: var(--blueOcean);
+    font-weight: var(--fontBold);
+    font-size: 0.8rem;
+}
+.offerCard a:hover{
+    opacity: 0.5;
+}
+.offers button{
+    width: 100%;
+    height: 50px;
+    background: var(--blueOcean);
+    color: var(--whiteStandard);
+    font-weight: var(--fontBold);
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    box-shadow: rgb(255 255 255 / 30%) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.offers button:hover{
+    opacity: 0.5;
+}
+.mainContent span{
+    text-align: center;
+    color: var(--textColor);
+    font-weight: var(--fontBold);
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.mainContent span:hover{
+    color: var(--strongText);
+}
+@media(min-width:768px){
+    .card{
+        width: 45%;
+    }
+}
+@media(min-width:1024px){
+    .card{
+        width: 30%;
+        transform: scale(1);
+    }
+    .waveDesktop{
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .wave{
+        display: none;
+    }
+}
+@media(min-width:1440px){
+    .card {
+        width: 25%;
+        transform: scale(1.5);
+    }
+}
+
+@media(min-width:1700px){
+    .card {
+        width: 20%;
+        transform: scale(2);
+    }
+}

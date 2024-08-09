@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --StrongCyan: hsl(171, 66%, 44%);
+    --LightBlue: hsl(233, 100%, 69%);
+    --Gray: hsl(210, 10%, 33%);
+    --lightGray:  hsl(201, 11%, 66%);
+    --footerGray:#f5f6f8;
+    --bg: #FFFFFFFF;
+    --clipFamily: 'Bai Jamjuree'
+}
+body{
+    display: grid;
+    gap: 90px;
+    place-items: center;
+}
+.bg-desktop{
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.bg-mobile{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+main{
+    width: 100%;
+    display: grid;
+    gap: 90px;
+    padding: 2rem;
+    z-index: 1;
+}
+main section h1{
+    font-family: var(--clipFamily);
+    color: var(--Gray);
+    font-weight: 600;
+    text-align: center;
+}
+main section p{
+    font-family: var(--clipFamily);
+    color: var(--lightGray);
+    font-weight: 400;
+    text-align: center;
+}
+.hero-section{
+    width: 100%;
+    display: grid;
+    gap: 30px;
+}
+.hero-section img{
+    place-self: center;
+}
+.hero-section .hero-text{
+    font-family: var(--clipFamily);
+    text-align: center;
+    display: grid;
+    gap: 15px;
+}
+.hero-text h1{
+    color: var(--Gray);
+    font-weight: 600;
+}
+.hero-text p{
+    color: var(--lightGray);
+    font-weight: 400;
+}
+.hero-section .buttons-hero{
+    font-family: var(--clipFamily);
+    display: grid;
+    gap: 15px;
+}
+.buttons-hero button{
+    height: 50px;
+    width: 100%;
+    place-self: center;
+    border-radius: 30px;
+    font-family: var(--clipFamily);
+    font-size: 1.2rem;
+}
+button:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+.buttons-hero button:first-child{
+    background-color: var(--StrongCyan);
+    color: var(--bg);
+    border: none;
+    filter: drop-shadow(0px 3px 2px #1c8d7c);
+}
+.buttons-hero button:nth-child(2){
+    background-color: var(--LightBlue);
+    color: var(--bg);
+    border: none;
+    filter: drop-shadow(0px 3px 2px #3d489d);
+}
+/*info-section*/
+.info-section{
+    display: grid;
+    gap: 60px;
+}
+.info-section .info-text{
+    display: grid;
+    gap: 15px;
+}
+.info-section img{
+    width: 100%;
+}
+
+.info-section .grid-division{
+    display: grid;
+    gap: 60px;
+}
+.features article{
+    
+}
+.features article h2{
+    font-family: var(--clipFamily);
+    color: var(--Gray);
+    text-align: center;
+}
+.features article p{
+    font-family: var(--clipFamily);
+    color: var(--Gray);
+    text-align: center;
+}
+
+/*devices*/
+.devices{
+    display: grid;
+    gap: 30px;
+}
+.devices-text{
+    display: grid;
+    gap: 15px;
+}
+.devices img{
+    width: 100%;
+}
+
+/*features*/
+.features{
+    display: grid;
+    gap: 60px;
+}
+.features .features-text{
+    font-family: var(--clipFamily);
+    text-align: center;
+    display: grid;
+    gap: 15px;
+}
+.features-content{
+    display: grid;
+    gap: 60px;
+}
+.features-text h2{
+    color: var(--Gray);
+}
+.features article{
+    display: grid;
+    gap: 15px;
+    place-items: center;
+}
+.features article .f-text-area{
+    display: grid;
+    gap: 15px;
+}
+
+/*brands*/
+.brands{
+    display: grid;
+    place-items: center;
+    gap: 60px;
+    margin-top: 90px;
+}
+
+/*apple*/
+.apple{
+    display: grid;
+    gap: 30px;
+}
+.apple .Apple-Text{
+    display: grid;
+    gap: 15px;
+}
+.appleButtons{
+    display: grid;
+    gap: 15px;
+}
+.appleButtons button{
+    width: 100%;
+    height: 50px;
+    place-self: center;
+    border-radius: 30px;
+    font-family: var(--clipFamily);
+    font-size: 1.2rem;
+}
+.appleButtons button:first-child{
+    background-color: var(--StrongCyan);
+    color: var(--bg);
+    border: none;
+    filter: drop-shadow(0px 3px 2px #1c8d7c);
+}
+.appleButtons button:nth-child(2){
+    background-color: var(--LightBlue);
+    color: var(--bg);
+    border: none;
+    filter: drop-shadow(0px 3px 2px #3d489d);
+}
+/*footer*/
+footer{
+    background-color: var(--footerGray);
+    display: grid;
+    place-items: center;
+    gap: 30px;
+    padding: 2rem;
+    width: 100%;
+}
+footer .logo{
+    width: 60px;
+}
+footer .footer-content{
+    display: grid;
+    text-align: center;
+    gap: 20px;
+    font-family: var(--clipFamily);
+}
+.footer-content a{
+    color: var(--Gray);
+    text-decoration: none;
+}
+footer .social-Media{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+@media(min-width:475px){
+    main{
+        width: 425px;
+    }
+}
+@media(min-width:1024px){
+    .bg-desktop{
+        display: block;
+    }
+    .bg-mobile{
+        display: none;
+    }
+    main{
+        width: 100%;
+        gap: 150px;
+    }
+    h1{
+        font-size: 1.7rem;
+    }
+    .hero-section{
+        width: 45%;
+        place-self: center;
+    }
+    .hero-section .buttons-hero{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .grid-division{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .info-section img{
+        position: relative;
+    left: -10%;
+    }
+    .info-section .info-text {
+        width: 60%;
+        place-self: center;
+    }
+    .info-section .grid-division .features{
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        gap: 30px;
+        justify-content: center;
+        padding: 3rem;
+    }
+    #Qsearch{
+        place-self: start;
+    }
+    #CloudSync{
+        place-self: start;
+    }
+    #History{
+        place-self: start;
+    }
+    .features article{
+        display: flex;
+        flex-direction: column;
+        place-self: center;
+        gap: 0;
+    }
+    .features article h2{
+        text-align: start;
+        place-self: start;
+    }
+    .features article p{
+        text-align: start;
+    }
+    .devices-text {
+        width: 60%;
+        place-self: center;
+    }
+    .devices img {
+        width: 60%;
+        place-self: center;
+    }
+    .features .features-text{
+        width: 60%;
+        place-self: center;
+    }
+    .features-content{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .features-content article .f-text-area{
+        width: 250px;
+    height: 90px;
+    }
+    .features-content article .f-text-area h2{
+        place-self: center;
+    }
+    .features-content article .f-text-area p{
+        text-align: center;
+        /* font-size: 0.5rem; */
+    }
+    .features-content article img{
+        width: 50px;
+    }
+    .brands{
+        display: flex;
+        justify-content: space-around;
+    }
+    .brands img{
+        /* width: 150px; */
+    }
+    .apple{
+        width: 45%;
+        place-self: center;
+    }
+    .appleButtons{
+        grid-template-columns: repeat(2,1fr);
+    }
+    footer{
+        grid-template-columns: repeat(3,1fr);
+        height: 200px;
+    }
+    footer .footer-content{
+        grid-template-columns: repeat(3,1fr);
+        text-wrap: nowrap;
+        text-align: justify;
+        grid-column-gap: 70px;
+    }
+}
+@media(min-width:1500px){
+    main{
+        width: 1440px;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    a{
+        font-size: 1.5rem;
+    }
+    .social-Media img{
+        width: 50px;
+    }
+}

@@ -1,0 +1,288 @@
+@font-face {
+    font-family: "Inter";
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --wfamily: 'Inter', sans-serif;
+    /* Weights: 400, 700, 800 */
+    --wred: #EF4335;
+    --wocean: #00001A;
+    --wgolden: #E9AA4F;
+    --wgray: #C0BEC6;
+    --wwhite: #FFFFFF;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100px; */
+}
+.navbar-mobile{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.navbar-mobile .menu-icon{
+    width: 40px;
+    height: 17px;
+}
+.main-mobile-navbar{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.navbar-mobile-filter{
+    width: 25%;
+    filter: brightness(0.5);
+    background: gray;
+    opacity: 0.5;
+}
+.navbar-mobile-options{
+z-index: 1;
+width: 75%;
+display: flex;
+flex-direction: column;
+background-color: var(--wwhite);
+padding-top: 35px;
+padding-right: 15px;
+height: 100vh;
+gap: 50px;
+}
+.inactive{
+display: none;
+}
+.navbar-mobile-options .close-icon{
+width: 30px;
+align-self: end;
+}
+.navbar-mobile-options ul{
+line-height: 3rem;
+padding-left: 15px;
+}
+.navbar-mobile-options ul li{
+list-style: none;
+}
+.navbar-mobile-options ul li a{
+text-decoration: none;
+color: var(--wocean);
+font-family: var(--wfamily);
+font-weight: 700;
+font-size: 1rem;
+}
+.navbar-mobile-options ul li a:hover{
+    color: var(--wred);
+}
+.navbar-desktop{
+    display: none;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.navbar-desktop .nav-options{
+    display: flex;
+    gap: 30px;
+}
+.navbar-desktop .nav-options a{
+    text-decoration: none;
+    color: var(--wocean);
+    font-family: var(--wfamily);
+}
+.navbar-desktop .nav-options a:hover{
+    color: var(--wred);
+}
+/*Main section de la pagina*/
+main{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+main .hero-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+main .hero-section .main-article{
+    width: 100%;
+}
+.main-article .imgHeroMobile{
+    width: 100%;
+}
+.main-article .imgHeroDesktop{
+    display: none;
+}
+.main-article .article-section{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.main-article .article-section h1{
+    font-family: var(--wfamily);
+    color: var(--wocean);
+    font-weight: bolder;
+    font-size: 2.5rem;
+    line-height: 40px;
+}
+.main-article .article-section .article-text{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.main-article .article-section .article-text p{
+    color: var(--wgray);
+    font-family: var(--wfamily);
+    font-weight: 400;
+}
+.main-article .article-section .article-text button{
+    background-color: var(--wred);
+    color: var(--wwhite);
+    font-family: var(--wfamily);
+    letter-spacing: 3px;
+    height: 35px;
+    border: none;
+    width: 45%;
+    cursor: pointer;
+}
+.main-article .article-section .article-text button:hover{
+    background-color: var(--wocean);
+}
+.hero-section .news{
+    width: 100%;
+    background-color: var(--wocean);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px 
+}
+.news h1{
+    color: var(--wgolden);
+    font-family: var(--wfamily);
+    font-size: 1.5rem;
+}
+.news article{
+    width: 100%;
+    color: white;
+    font-family: var(--wfamily);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.news article h3:hover{
+    color: var(--wgolden);
+    cursor: pointer;
+}
+.news article span{
+    color: var(--wgray);
+}
+.news hr{
+    opacity: 0.2;
+}
+.top-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+.top-section article{
+    display: flex;
+    gap: 15px;
+    height: 160px;
+}
+.top-section article img{
+    width: 40%;
+    object-fit: cover;
+}
+.top-section article div{
+    width: 60%;
+    font-family: var(--wfamily);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+.top-section article div h3{
+    font-size: 1.5rem;
+    color: var(--wgray);
+}
+.top-section article div p{
+    color: var(--wgray);
+}
+
+@media(min-width:768px){
+    .navbar-mobile{
+        display: none;
+    }
+    .navbar-desktop{
+        display: flex;
+    }
+    .main-article{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .main-article .imgHeroMobile{
+        display: none;
+    }
+    .main-article .imgHeroDesktop{
+        display: block;
+        width: 100%;
+    }
+    .main-article .article-section{
+        display: flex;
+        flex-direction: row;
+    }
+    .main-article .article-section h1{
+        width: 50%;
+        font-size: 3.5rem;
+        line-height: 60px;
+    }
+    .main-article .article-section .article-text{
+        width: 50%;
+        align-self: center;
+    }
+    .article-text{
+        font-size: 1.2rem;
+    }
+}
+@media(min-width:1024px){
+    .navbar-desktop .nav-options{
+        gap: 50px;
+    }
+    main .hero-section{
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+    }
+    .hero-section .main-article{
+        grid-column: 1/8;
+    }
+    .hero-section .news{
+        grid-column: 8/13;
+        justify-content: space-around;
+        grid: 30px;
+    }
+    .top-section{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 30px;
+    }
+}

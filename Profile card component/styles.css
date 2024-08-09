@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "Kumbh Sans";
+    src: url(./Kumbh_Sans/KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainBackground: hsl(185, 75%, 39%);
+    --profiletextDark:  hsl(229, 23%, 23%);
+    --profileTextGray: hsl(0, 0%, 59%);
+    --profileWhite: #FFFFFF;
+    --profileFamily: "Kumbh Sans"
+}
+html{
+    overflow: hidden;
+}
+body{
+    background-color: var(--mainBackground);
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-circle{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.bottom-circle{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+}
+
+.card{
+    width: 300px;
+    z-index: 1;
+    background-color:var(--profileWhite);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    font-family: var(--profileFamily);
+    border-radius: 10px;
+}
+.card img{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.card .user-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: -75px;
+}
+.user-data .user-data-info{
+    text-align: center;
+}
+.user-data-info strong{
+    color: var(--profiletextDark);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.user-data-info h2{
+    color: var(--profileTextGray);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.user-data-info span{
+    color: var(--profileTextGray);
+    font-size: 1rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.card .user-data img{
+    width: 80px;
+    border: solid;
+    border-radius: 100%;
+    border-color: var(--profileWhite);
+    border-width: thick;
+}
+hr{
+    height: 1px;
+    width: 100%;
+    background: var(--profileTextGray);
+}
+.card .user-stats{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.user-stats div{
+    display: grid;
+    place-items: center;
+}
+.user-stats div h2{
+    color: var(--profiletextDark);
+    font-size: 1.2rem;
+}
+.user-stats div span{
+    color: var(--profileTextGray);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+@media(min-width:425px){
+    .top-circle{
+        width: 80%;
+    }
+    .bottom-circle{
+        width: 80%;
+    }
+}
+@media(min-width:1024px){
+    .top-circle{
+        width: 90%;
+    }
+    .bottom-circle{
+        width: 90%;
+    }
+}
+@media(min-width:1440px){
+    .top-circle{
+        width: 100%;
+    }
+    .bottom-circle{
+        width: 100%;
+    }
+}

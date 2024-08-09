@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --pinkActive:hsl(300, 69%, 71%);
+    --textColor: white;
+    --headerText: "Poppins";
+    --pText: "Open Sans";
+}
+body{
+    background-color: var(--violet);
+    display: grid;
+    place-items: center;
+    gap: 30px;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    z-index: 1;
+}
+nav{
+    width: 90%;
+}
+nav img{
+    width: 100px;
+}
+.mobileImage{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.desktopImage{
+    display: none;
+}
+main{
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    z-index: 1;
+}
+.hero-section{
+    display: grid;
+    place-items: center;
+}
+.hero-section img{
+    width: 90%;
+}
+main .textContent{
+    text-align: center;
+    display: grid;
+    gap: 15px;
+    place-self: center;
+    width: 80%;
+    color: var(--textColor);
+}
+main .textContent h1{
+    font-family: var(--headerText);
+}
+main .textContent p{
+    font-family: var(--pText);
+}
+button{
+    width: 150px;
+    height: 40px;
+    place-self: center;
+    background-color: var(--textColor);
+    color: var(--violet);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button:hover{
+    background-color: var(--pinkActive);
+    color: var(--textColor);
+}
+footer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+footer div{
+    display: flex;
+    gap: 25px;
+}
+svg{
+    padding: 8px;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    border: solid #fff;
+    border-width: 1px;
+    fill: white;
+    cursor: pointer;
+}
+svg:hover{
+    border: solid;
+    border-width: 1px;
+    border-color: var(--pinkActive);
+    fill: var(--pinkActive);
+}
+
+@media(min-width:375px){
+    main{
+        width: 375px;
+    }
+    footer{
+        width: 375px;
+    }
+}
+@media(min-width:1024px){
+    body{
+        height: 100vh;
+        gap: 0;
+    }
+    .mobileImage{
+        display: none;
+    }
+    .desktopImage{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+    }
+    nav img{
+        width: 200px;
+    }
+    main{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    main .textContent{
+        text-align: start;
+        align-self: flex-start;
+        padding-top: 1rem;
+    }
+    .hero-section img{
+        width: 100%;
+    }
+    button{
+        place-self: start;
+        font-size: 1rem;
+    }
+    footer{
+        width: 90%;
+        justify-content: end;
+        /* height: 100px; */
+        align-items: center;
+    }
+}
+@media(min-width:1275px){
+    .textContent h1{
+        font-size: 2.5rem;
+    }
+    .textContent p{
+        font-size: 1.2rem;
+    }
+    button{
+        width: 200px;
+        height: 50px;
+    }
+}
+@media(min-width:1500px){
+    nav{
+        width: 1350px;
+    }
+    main{
+        width: 1350px;
+    }
+    footer{
+        width: 1350px;
+    }
+}

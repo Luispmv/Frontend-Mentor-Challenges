@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "Karla";
+    src: url(./Karla/Karla-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla";
+}
+:root{
+    --yellow: hsl(71, 73%, 54%);
+    --cyan: hsl(179, 62%, 43%);
+    --lightCyan: #4ABEBD;
+    --lightGray: hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 22%, 67%);
+    --white: #FFFFFF;
+    --medium: 400;
+    --bold: 700;
+}
+body{
+    background-color: var(--lightGray);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.container{
+    width: 300px;
+    display: grid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container section{
+    display: grid;
+    gap: 20px;
+    padding: 1rem;
+}
+.container section:first-child{
+    background-color: var(--white);
+}
+.container section:first-child h2{
+    color: var(--cyan);
+    font-weight: var(--bold);
+}
+.container section:first-child span{
+    color: var(--yellow);
+    font-weight: var(--bold);
+}
+.container section:first-child p{
+    color: var(--grayishBlue);
+    font-weight: var(--bold);
+}
+.container section:nth-child(2){
+    background-color: var(--cyan);
+}
+.container section:nth-child(3){
+    background-color: var(--lightCyan);
+}
+.pros-container{
+    display: grid;
+    gap: 20px;
+}
+.Monthly{
+    color: var(--white);
+}
+.prices-container{
+    display: grid;
+    gap: 20px;
+}
+.prices{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.prices h3{
+    font-size: 2rem;
+}
+.prices span{
+    color: var(--lightGray);
+}
+button{
+    background-color: var(--yellow);
+    color: var(--white);
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.us h2{
+    color: var(--white)
+}
+.us ul{
+    list-style-type: none;
+    color: var(--lightGray);
+}
+@media(min-width:1024px){
+    .container{
+        width: 615px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,1fr);
+        height: 465px;
+    }
+    .container section{
+        padding: 2rem;
+    }
+    .container section:first-child {
+        grid-column: 1/5;
+    }
+    .pros-container{
+        gap: 0;
+    }
+    .Monthly{
+        grid-column: 1/3;
+    }
+    .prices-container{
+        display: grid;
+        gap: 10px;
+    }
+    .us{
+        grid-column: 3/5;
+    }
+}

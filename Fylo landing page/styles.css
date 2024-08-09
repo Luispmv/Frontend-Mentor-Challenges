@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --darkBlue: hsl(243, 87%, 12%);
+    --gray:  hsl(238, 22%, 44%);
+    --botonBlue: hsl(224, 93%, 58%);
+    --accentCyan: hsl(170, 45%, 43%);
+    --neutralWhite:  hsl(240, 75%, 98%);
+    --neutralGray:  hsl(0, 0%, 75%);
+    --whiteColor: #FFFFFFFF;
+
+    /* Headings, Call-to-actions, Header Navigation */
+    --mainFont: "Raleway";
+
+    /*Body*/
+    --secondFont: "Open Sans";
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--mainFont);
+    height: 20vh;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+}
+header nav img{
+    width: 100px;
+}
+header nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+}
+header nav ul a{
+    text-decoration: none;
+    color: var(--darkBlue);
+    font-size: 13px;
+}
+main{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.hero-section{
+    display: grid;
+    padding-bottom: 5rem 
+}
+.hero-section img{
+    width: 90%;
+    place-self: center;
+}
+.hero-text{
+    font-family: var(--secondFont);
+    text-align: center;
+    display: grid;
+    gap: 30px;
+}
+.hero-text h1{
+    font-family: var(--mainFont);
+}
+.hero-text p{
+}
+.hero-text label{
+    display: grid;
+    gap: 15px;
+}
+label input{
+    width: 90%;
+    height: 50px;
+    place-self: center;
+    padding-left: 1rem;
+}
+label button{
+    width: 90%;
+    background-color: var(--botonBlue);
+    height: 50px;
+    place-self: center;
+    border: none;
+    color: var(--neutralWhite);
+    font-size: 16px;
+}
+label button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.info-section{
+    display: grid;
+    width: 100%;
+}
+.waveDesktop{
+    width: 100%;
+    display: none;
+}
+.waveMobile{
+    width: 100%;
+}
+.info-section-container{
+    background-color: var(--neutralWhite);
+    display: grid;
+    gap: 30px;
+    padding-bottom: 60px;
+}
+.info{
+    display: grid;
+    width: 90%;
+    place-self: center;
+}
+.ilustration-info{
+    width: 100%;
+    place-self: center;
+}
+.infoTextDiv{
+    display: grid;
+    gap: 30px;
+    width: 100%;
+    place-self: center;
+}
+.infoText{
+    display: grid;
+    gap: 30px;
+    font-family: var(--secondFont);
+}
+.infoText h2{
+    text-align: center;
+}
+.p-info{
+    display: grid;
+    gap: 15px;
+    color: var(--gray);
+}
+.filo-outline{
+    display: flex;
+    place-self: center;
+    color: var(--accentCyan);
+    border-bottom: solid;
+    border-width: 2px;
+    align-items: center;
+}
+.filo-outline:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.filo-outline img{
+    object-fit: contain;
+    width: 30px;
+}
+.testimonial-card{
+    background-color: var(--whiteColor);
+    display: grid;
+    gap: 15px;
+    padding: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.testimonial-card span{
+    font-family: var(--secondFont);
+    color: var(--darkBlue);
+    font-size: 13px;
+    font-weight: 400;
+}
+.user-testimonial{
+    display: flex;
+    gap: 15px;
+}
+.user-testimonial img{
+    width: 40px;
+    object-fit: contain;
+    border-radius: 100%;
+}
+.user-info{
+    display: grid;
+    font-family: var(--secondFont);
+}
+.early-access{
+    width: 100%;
+    background-color: var(--gray);
+    display: grid;
+    color: var(--whiteColor);
+    gap: 30px;
+    padding: 3rem 0rem 3rem 0rem;
+}
+.early-access-container{
+    display: grid;
+    gap: 30px;
+}
+.early-access-text{
+    display: grid;
+    gap: 15px;
+    width: 90%;
+    place-self: center;
+}
+.early-access-text h2{
+    font-family: var(--mainFont);
+    text-align: center;
+}
+.early-access-text p{
+    text-align: center;
+    font-family: var(--secondFont);
+}
+.early-access label{
+    display: grid;
+    place-items: center;
+    gap: 15px;
+    place-self: center;
+    width: 100%;
+}
+footer{
+    background-color: var(--darkBlue);
+    color: var(--whiteColor);
+    font-family: var(--secondFont);
+    display: grid;
+    gap: 60px;
+    padding: 2rem;
+}
+.fylo-contact{
+    display: grid;
+    gap: 30px;
+}
+.fylo-contact-container{
+    display: grid;
+    gap: 15px;
+}
+.contact{
+    display: flex;
+    gap: 15px;
+}
+.contact img{
+    object-fit: contain;
+}
+.fyloAbout{
+    display: grid;
+    gap: 30px;
+}
+.fyloAbout ul{
+    display: grid;
+    gap: 15px;
+    list-style: none;
+}
+.fyloAbout ul li a{
+    color: var(--whiteColor);
+    text-decoration: none;
+}
+.socialMedia{
+    width: 50%;
+    place-self: center;
+    display: flex;
+    justify-content: space-around;
+}
+.socialMedia svg{
+    fill: var(--whiteColor);
+    outline: solid;
+    outline-width: thin;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 100%;
+}
+.socialMedia svg:hover{
+    fill: var(--botonBlue);
+    outline-color: var(--botonBlue);
+    cursor: pointer;
+}
+@media(min-width:375px){
+    header nav ul a{
+        font-size: 16px;
+    }
+}
+@media(min-width:600px){
+    header nav{
+        width: 500px;
+    }
+    .hero-section{
+        width: 500px;
+    }
+    .info{
+        width: 500px;
+    }
+    .early-access-text{
+        width: 500px;
+    }
+    .early-access label{
+        width: 500px;
+    }
+    .fylo-contact{
+        width: 500px;
+        place-self: center;
+    }
+    .fyloAbout{
+        width: 500px;
+        place-self: center;
+    }
+}
+@media(min-width:1024px){
+    header nav{
+        width: 90%;
+    }
+    header nav ul a{
+        font-size: 20px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.3rem;
+    }
+    .hero-section{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90%;
+    }
+    .hero-text{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-text h1{
+        text-align: start;
+    }
+    .hero-text p{
+        text-align: start;
+    }
+    .hero-section img{
+        width: 50%;
+    }
+    .hero-text label{
+        display: flex;
+    }
+    label input{
+        width: 60%;
+    }
+    label button{
+        width: 40%;
+    }
+    .waveDesktop{
+        display: block;
+    }
+    .waveMobile{
+        display: none;
+    }
+    .info{
+        display: flex;
+        width: 90%;
+        flex-direction: row-reverse;
+        gap: 30px 
+    }
+    .ilustration-info{
+        width: 50%;
+    }
+    .infoTextDiv{
+        text-align: start;
+    }
+    .infoText{
+        gap: 10px 
+    }
+    .infoText h2{
+        text-align: start;
+    }
+    .filo-outline{
+        place-self: start;
+    }
+    .testimonial-card{
+        width: 60%;
+    }
+    .early-access{
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        padding: 5rem 0rem 5rem 0rem 
+    }
+    .early-access-container{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+    .early-access-text{
+        width: 40%;
+    }
+    .early-access-text h2{
+        text-align: start;
+    }
+    .early-access-text p {
+        text-align: start;
+    }
+    .early-access label{
+        width: 50%;
+    }
+    .early-access label input{
+        place-self: start;
+        width: 100%;
+    }
+    .early-access label button{
+        place-self: start;
+    }
+
+    footer{
+        display: flex;
+        gap: 0;
+        justify-content: center;
+        padding: 6rem 2rem 6rem 2rem;
+    }
+    .footer-content{
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+    }
+    .fylo-contact{
+        width: 30%;
+    }
+    .fyloAbout{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+    }
+    .socialMedia{
+        width: 30%;
+    }
+}
+@media(min-width:1600px){
+    header nav{
+        width: 1500px;
+    }
+    .hero-section{
+        width: 1500px;
+    }
+    .info{
+        width: 1500px;
+    }
+    .early-access-container{
+        width: 1500px;
+    }
+    .footer-content{
+        width: 1500px;
+    }
+}

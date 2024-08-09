@@ -1,0 +1,204 @@
+@font-face {
+    font-family: Hanken Grotesk;
+    src: url(./fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--familia);
+}
+:root{
+    /*Font colors*/
+    --Lightred: hsl(0, 100%, 67%);
+    --Orangeyyellow: hsl(39, 100%, 56%);
+    --Greenteal: hsl(166, 100%, 37%);
+    --Cobaltblue: hsl(234, 85%, 45%);
+    
+    /*Backgrounds*/
+    --lightRedbg: hsl(0deg 100% 92.52%);
+    --OrangeYellowbg: hsl(39deg 100% 87.62%);
+    --greenTealbg: hsl(166deg 100% 92.13%);
+    --cobaltBluebg: hsl(234deg 100% 91.73%);
+
+    /*Gradientes*/
+    --mainbackground: linear-gradient(180deg, #6743FF 0%, #312CEA 100%);
+    --circleBackground: linear-gradient(180deg, #4B21C8 0%, #4432E2 100%);
+    /*Colores neutrales*/
+    --White: hsl(0, 0%, 100%);
+    --Paleblue: hsl(221, 100%, 96%);
+    --Lightlavender: hsl(241, 100%, 89%);
+    --Darkgrayblue: hsl(224, 30%, 27%);
+
+    /*Familia de Fuentes*/
+    --familia : Hanken Grotesk;
+}
+.mainCard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.mainCard .results-view-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    color: var(--White);
+    background: var(--mainbackground);
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    padding: 3rem;
+}
+.results-view-container span{
+    color: var(--Lightlavender);
+    font-weight: 500;
+}
+.results-view-container figure{
+    display: grid;
+    place-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--circleBackground);
+}
+.results-view-container figure h1{
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.results-view-container figure p{
+    color: var(--Lightlavender);
+}
+.results-view-container p{
+    text-align: center;
+    color: var(--Lightlavender);
+}
+
+.summaryContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+.summaryContainer h2{
+    width: 90%;
+    color: var(--Darkgrayblue);
+}
+.summaryContainer article{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+    border-radius: 10px;
+}
+.summaryContainer article .left-side{
+    display: flex;
+    gap: 10px;
+}
+.summaryContainer article .left-side p {
+    font-weight: bold;
+}
+.summaryContainer article span{
+    color: var(--Darkgrayblue);
+    font-weight: 800;
+}
+.summaryContainer article span strong{
+    color: black;
+}
+.summaryContainer .Reaction{
+    background-color: var(--lightRedbg);
+}
+.summaryContainer .Reaction .left-side p{
+    color: var(--Lightred);
+}
+.summaryContainer .Memory{
+    background-color: var(--OrangeYellowbg);
+}
+.summaryContainer .Memory .left-side p{
+    color: var(--Orangeyyellow);
+}
+.summaryContainer .Verbal{
+    background-color: var(--greenTealbg);
+}
+.summaryContainer .Verbal .left-side p{
+    color: var(--Greenteal);
+}
+.summaryContainer .Visual{
+    background-color: var(--cobaltBluebg);
+}
+.summaryContainer .Visual .left-side p{
+    color: var(--Cobaltblue);
+}
+.summaryContainer button{
+    margin-top: 30px;
+    width: 90%;
+    align-self: center;
+    height: 50px;
+    background-color: var(--Darkgrayblue);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.summaryContainer button:hover{
+    background: var(--mainbackground);
+}
+
+@media(min-width:1024px){
+    body{
+        display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    }
+    .mainCard{
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        -webkit-box-shadow: 0px 0px 60px 15px rgba(212,235,255,1);
+        -moz-box-shadow: 0px 0px 60px 15px rgba(212,235,255,1);
+        box-shadow: 0px 0px 60px 15px rgba(212,235,255,1);
+        border-radius: 40px;
+    }
+    .results-view-container{
+        gap: 20px;
+        width: 50% !important;
+        border-radius: 10%;
+    }
+    .results-view-container span{
+        font-size: 1.5rem;
+    }
+    .results-view-container figure{
+        width: 200px;
+        height: 200px;
+    }
+    .results-view-container figure h1{
+        font-size: 5rem;
+    }
+    .results-view-container h2{
+        font-size: 2rem;
+    }
+    .results-view-container p{
+        padding: 0px 20px 0px 20px;
+    }
+    .summaryContainer{
+        width: 50%;
+        padding: 1rem;
+        gap: 30px;
+    }
+    .summaryContainer button{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media(min-width:1700px){
+    .mainCard{
+        width: 30%;
+        transform: scale(2);
+    }
+}
